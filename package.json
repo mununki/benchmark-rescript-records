@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "bench": "node index.js",
+    "build:record": "cd record && yarn && yarn build",
+    "build:record_optional": "cd record_optional && yarn && yarn build",
+    "build:record_spread": "cd record_spread && yarn && yarn build",
+    "build:record_spread_optional": "cd record_spread_optional && yarn && yarn build",
+    "build": "concurrently yarn:build:record yarn:build:record_optional yarn:build:record_spread yarn:build:record_spread_optional"
+  },
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "concurrently": "^8.1.0",
+    "microtime": "^3.1.1"
+  }
+}
